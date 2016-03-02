@@ -12,7 +12,7 @@ image:../images/openzwave3.png[]
 Comme à beaucoup d'endroits sur Jeedom, placer la souris tout à gauche permet de faire apparaître un menu d'accès rapide (vous pouvez, à partir de votre profil, le laisser toujours visible).
 
 [TIP]
-Les boutons sur la ligne tout en haut *Synhroniser*, *Réseau-Zwave* et *Santé*, sont visible seulement si vous êtes en mode *Expert*.
+Les boutons sur la ligne tout en haut *Synhroniser*, *Réseau-Zwave* et *Santé*, sont visibles seulement si vous êtes en mode *Expert*.
 image:../images/openzwave51.png[]
 
 === Général
@@ -30,7 +30,7 @@ image:../images/openzwave4.png[]
 * *Serveur* : serveur Z-Wave auquel est rattaché votre module. Il est déconseillé de changer ça, à moins de savoir ce que vous faites.
 * *Délai maximum autorisé entre 2 messages (min)* : le délai maximum autorisé entre 2 messages avant que Jeedom ne déclare l'équipement en "timeout".
 * *Commentaire* : vous permet de mettre des commentaires sur l'équipement (ex : pile changée le XX/XX/XXXX)
-* *Module* : ce champs n'apparaît que si il existe différents types de configuration pour votre module (cas pour les modules pouvant faire fils pilotes par exemple). Il vous permet lors de configurer la configuration à utiliser ou de la modifier par la suite
+* *Module* : ce champs n'apparaît que si il existe différents types de configuration pour votre module (cas pour les modules pouvant faire fils pilotes par exemple). Il vous permet de sélectionner la configuration à utiliser ou de la modifier par la suite
 * *Marque* : fabricant de votre module Z-Wave.
 * *Configuration* : fenêtre de configuration des paramètres du module
 * *Assistant* : disponible uniquement sur certains modules, il vous aide à configurer le module (cas sur le zipato keyboard par exemple)
@@ -46,14 +46,14 @@ image:../images/openzwave29.png[]
 En fonction des types et sous-types, certaines options peuvent être absentes.
 
 * le nom affiché sur le dashboard
-* icône : dans le cas d'une action permet de choisir une icône à afficher sur le dashboard au lieu du texte
-* valeur de la commande : dans le cas d'une commande type action, sa valeur peut être liée à une commande de type info, c'est ici que cela se configure. Exemple pour une lampe l'intensité est liée à son état, cela permet au widget d'avoir l'état réel de la lampe.
+* icône : dans le cas d'une action, permet de choisir une icône à afficher sur le dashboard au lieu du texte
+* valeur de la commande : dans le cas d'une commande type action, sa valeur peut être liée à une commande de type info, c'est ici que cela se configure. Exemple pour une lampe, l'intensité est liée à son état, cela permet au widget d'avoir l'état réel de la lampe.
 * le type et le sous-type.
 * l'instance de cette commande Z-Wave (réservée aux experts).
 * la classe de la commande Z-Wave (réservée aux experts).
 * la commande en elle-même (réservée aux experts).
 * "Valeur de retour d'état" et "Durée avant retour d'état" : permet d'indiquer à Jeedom qu'après un changement sur l'information sa valeur doit revenir à Y, X min après le changement. Exemple : dans le cas d'un détecteur de présence qui n'émet que lors d'une détection de présence, il est utile de mettre par exemple 0 en valeur et 4 en durée, pour que 4 min après une détection de mouvement (et s'il n'y a eu pas eu de nouvelles depuis) Jeedom remette la valeur de l'information à 0 (plus de mouvement détecté).
-* historier : permet d'historiser la donnée.
+* historiser : permet d'historiser la donnée.
 * afficher : permet d'afficher la donnée sur le dashboard.
 * unité : unité de la donnée (peut être vide).
 * min/max : bornes de la donnée (peuvent être vides).
@@ -64,25 +64,25 @@ En fonction des types et sous-types, certaines options peuvent être absentes.
 
 [IMPORTANT]
 Le bouton *Tester* dans le cas d'une commande de type Info, ne vas pas interroger le module directement mais la valeur disponible dans le cache de Jeedom.
-Le test retournera la bonne valeur seulement si le module en question a transmis une nouvelle valeur correspondant à définition de la commande.
+Le test retournera la bonne valeur seulement si le module en question a transmis une nouvelle valeur correspondant à la définition de la commande.
 Il est alors tout à fait normal de ne pas obtenir de résultat suite à la création d'une nouvelle commande Info, spécialement sur un module sur pile qui notifie rarement Jeedom.
 
 === Jeux de Commandes
 
-Certains modules on plusieurs jeux de commandes préconfigurées
+Certains modules on plusieurs jeux de commandes préconfigurés
 
 image:../images/openzwave45.png[]
 
-Vous pouvez sélectionner via les choix possible si le module le permet.
+Vous pouvez sélectionner via les choix possibles si le module le permet.
 
 === Documentation et Assistant
 
-Pour un certain nombre de module, une aide spécifique pour la mise en place ainsi que de recommandantion de parametres sont disponible.
+Pour un certain nombre de module, une aide spécifique pour la mise en place ainsi que des recommandations de paramètres sont disponibles.
 
 image:../images/openzwave55.png[]
 
-Le bouton *Documentation* permet d'accèder à la documentation spécifique du module pour Jeedom.
+Le bouton *Documentation* permet d'accéder à la documentation spécifique du module pour Jeedom.
 
-Des modules particuliers dispose aussi d'un assistant spécifique afin de façiliter l'application de certain parametres ou fonctionnements.
+Des modules particuliers disposent aussi d'un assistant spécifique afin de façiliter l'application de certains parametres ou fonctionnement.
 
-Le bouton *Assistant* permet d'accèder à l'écran assistant spécifique du module.
+Le bouton *Assistant* permet d'accéder à l'écran assistant spécifique du module.
